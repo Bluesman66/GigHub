@@ -218,6 +218,14 @@
     <Compile Include="Migrations\201703221700241_PopulateGenresTable.Designer.cs">
       <DependentUpon>201703221700241_PopulateGenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703261303585_ChangeGenreIdTypeToByte.cs" />
+    <Compile Include="Migrations\201703261303585_ChangeGenreIdTypeToByte.Designer.cs">
+      <DependentUpon>201703261303585_ChangeGenreIdTypeToByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703261308491_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201703261308491_AddForeignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201703261308491_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -312,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703221700241_PopulateGenresTable.resx">
       <DependentUpon>201703221700241_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703261303585_ChangeGenreIdTypeToByte.resx">
+      <DependentUpon>201703261303585_ChangeGenreIdTypeToByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703261308491_AddForeignKeyPropertiesToGig.resx">
+      <DependentUpon>201703261308491_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
