@@ -1,4 +1,5 @@
-﻿@model GigHub.ViewModels.GigsViewModel
+﻿@using System.Globalization
+@model GigHub.ViewModels.GigsViewModel
 @{
 	ViewBag.Title = "Home Page";
 }
@@ -9,10 +10,10 @@
 		<li>
 			<div class="date">
 				<div class="month">
-					@gig.DateTime.ToString("MMM")
+					@gig.DateTime.ToString("MMM", new CultureInfo("en-US"))
 				</div>
 				<div class="day">
-					@gig.DateTime.ToString("d ")
+					@gig.DateTime.ToString("d ", new CultureInfo("en-US"))
 				</div>
 			</div>
 			<div class="details">

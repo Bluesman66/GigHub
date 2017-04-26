@@ -1,4 +1,5 @@
-﻿@model IEnumerable<GigHub.Models.Gig>
+﻿@using System.Globalization
+@model IEnumerable<GigHub.Models.Gig>
 @{
 	ViewBag.Title = "Mine";
 }
@@ -10,10 +11,10 @@
 		<li>
 			<div class="date">
 				<div class="month">
-					@gig.DateTime.ToString("MMM")
+					@gig.DateTime.ToString("MMM", new CultureInfo("en-US"))
 				</div>
 				<div class="day">
-					@gig.DateTime.ToString("d ")
+					@gig.DateTime.ToString("d ", new CultureInfo("en-US"))
 				</div>
 			</div>
 			<div class="details">
@@ -23,6 +24,9 @@
 				<span class="genre">
 					@gig.Genre.Name
 				</span>
+				<div class="actions">
+					<a href="@Url.Action("Edit", "Gigs", new { id = gig.Id })">Edit</a>
+				</div>
 			</div>
 		</li>
 	}
