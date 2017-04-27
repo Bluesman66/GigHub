@@ -1,5 +1,4 @@
-﻿@using System.Globalization
-@model GigHub.ViewModels.GigsViewModel
+﻿@model GigHub.ViewModels.GigsViewModel
 @{
 	ViewBag.Title = "Home Page";
 }
@@ -19,6 +18,12 @@
 			<div class="details">
 				<span class="artist">
 					@gig.Artist.Name
+					
+					@if (gig.IsCanceled)
+					{
+						<span class="label label-warning">Canceled</span>
+					}
+
 					@if (Model.ShowActions)
 					{
 						<button data-user-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-following">Following ?</button>
@@ -27,7 +32,7 @@
 				<span class="genre">
 					@gig.Genre.Name
 				</span>
-				@if (Model.ShowActions)
+				@if (Model.ShowActions && !gig.IsCanceled)
 				{
 					<button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going ?</button>
 				}
